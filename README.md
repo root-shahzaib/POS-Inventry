@@ -1,6 +1,4 @@
 # POS-Inventry
-Deep-Point Of Sale in C#
-
-DashBoard
+**Version 1.0.0**
 
 

@@ -3,7 +3,7 @@
 
 # Overview
 
-This windows application is made as a semster project 
+This windows application is made as a semester project 
 Subject : Visual Programming
 
 *Login Screen*

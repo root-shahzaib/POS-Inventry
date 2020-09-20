@@ -31,16 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.itemid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.itemname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Quanity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Price = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -48,9 +39,12 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.cashiergrid = new System.Windows.Forms.DataGridView();
+            this.paytxt = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cashierreportbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cashiergrid)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -70,6 +64,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -78,16 +73,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(125, 21);
             this.comboBox2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(219, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Quanity :";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -95,67 +81,9 @@
             this.label3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(444, 121);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Total Price :";
-            // 
-            // listView1
-            // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.itemid,
-            this.itemname,
-            this.Quanity,
-            this.Price});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(170, 161);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(589, 379);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // itemid
-            // 
-            this.itemid.Text = "ITEM ID";
-            this.itemid.Width = 165;
-            // 
-            // itemname
-            // 
-            this.itemname.Text = "ITEM NAME";
-            this.itemname.Width = 150;
-            // 
-            // Quanity
-            // 
-            this.Quanity.Text = "Quanity";
-            this.Quanity.Width = 128;
-            // 
-            // Price
-            // 
-            this.Price.Text = "Price";
-            this.Price.Width = 142;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(302, 547);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 21);
-            this.comboBox3.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(633, 547);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(126, 20);
-            this.textBox1.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(297, 121);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 11;
+            this.label3.Text = "Sell Price :";
             // 
             // textBox3
             // 
@@ -163,6 +91,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(125, 20);
             this.textBox3.TabIndex = 12;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -186,6 +115,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "Add item";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -193,12 +123,13 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(510, 583);
+            this.button1.Location = new System.Drawing.Point(499, 573);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 30);
             this.button1.TabIndex = 15;
             this.button1.Text = "CONFIRM";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -206,12 +137,13 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(633, 583);
+            this.button2.Location = new System.Drawing.Point(147, 573);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 30);
             this.button2.TabIndex = 16;
-            this.button2.Text = "CANCEL";
+            this.button2.Text = "Remove";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -233,25 +165,46 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Cashier";
             // 
-            // label6
+            // cashiergrid
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(166, 549);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 19);
-            this.label6.TabIndex = 18;
-            this.label6.Text = "Customer  Name :";
+            this.cashiergrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cashiergrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cashiergrid.Location = new System.Drawing.Point(147, 174);
+            this.cashiergrid.Name = "cashiergrid";
+            this.cashiergrid.Size = new System.Drawing.Size(743, 367);
+            this.cashiergrid.TabIndex = 20;
+            this.cashiergrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cashiergrid_CellContentClick);
             // 
-            // label7
+            // paytxt
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(585, 546);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 19);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "Pay :";
+            this.paytxt.Location = new System.Drawing.Point(474, 547);
+            this.paytxt.Name = "paytxt";
+            this.paytxt.Size = new System.Drawing.Size(125, 20);
+            this.paytxt.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(387, 548);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Total Price :";
+            // 
+            // cashierreportbtn
+            // 
+            this.cashierreportbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.cashierreportbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cashierreportbtn.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            this.cashierreportbtn.ForeColor = System.Drawing.Color.White;
+            this.cashierreportbtn.Location = new System.Drawing.Point(790, 573);
+            this.cashierreportbtn.Name = "cashierreportbtn";
+            this.cashierreportbtn.Size = new System.Drawing.Size(100, 30);
+            this.cashierreportbtn.TabIndex = 23;
+            this.cashierreportbtn.Text = "Report";
+            this.cashierreportbtn.UseVisualStyleBackColor = false;
+            this.cashierreportbtn.Click += new System.EventHandler(this.cashierreportbtn_Click);
             // 
             // Cashier
             // 
@@ -259,20 +212,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(911, 657);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cashierreportbtn);
+            this.Controls.Add(this.paytxt);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cashiergrid);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
@@ -284,6 +234,7 @@
             this.Text = "Cashier";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cashiergrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,16 +245,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader itemid;
-        private System.Windows.Forms.ColumnHeader itemname;
-        private System.Windows.Forms.ColumnHeader Quanity;
-        private System.Windows.Forms.ColumnHeader Price;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button4;
@@ -311,7 +253,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridView cashiergrid;
+        private System.Windows.Forms.TextBox paytxt;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button cashierreportbtn;
     }
 }

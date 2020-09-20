@@ -153,9 +153,29 @@ namespace Inventry_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap passicon1 {
+            get {
+                object obj = ResourceManager.GetObject("passicon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap personicon {
             get {
                 object obj = ResourceManager.GetObject("personicon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap personicon1 {
+            get {
+                object obj = ResourceManager.GetObject("personicon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
